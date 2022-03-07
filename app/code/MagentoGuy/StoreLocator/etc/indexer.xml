@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Indexer/etc/indexer.xsd">
+    <indexer id="store_locator" view_id="store_locator" class="MagentoGuy\StoreLocator\Model\Indexer\StoreLocator">
+        <title translate="true">Store Locator</title>
+        <description translate="true">Rebuild store locator index</description>
+    </indexer>
+</config>

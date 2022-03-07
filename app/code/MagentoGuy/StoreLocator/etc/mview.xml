@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Mview/etc/mview.xsd">
+    <view id="store_locator" class="MagentoGuy\StoreLocator\Model\Indexer\StoreLocator" group="indexer">
+        <subscriptions>
+            <table name="store_locator" entity_column="store_id" />
+        </subscriptions>
+    </view>
+</config>

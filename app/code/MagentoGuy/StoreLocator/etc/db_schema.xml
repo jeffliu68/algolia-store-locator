@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="store_locator" resource="default" comment="Store Locator">
+        <column xsi:type="smallint" name="store_id" padding="6" unsigned="false" nullable="false" identity="true" comment="Store ID"/>
+        <constraint referenceId="PRIMARY" xsi:type="primary">
+            <column name="store_id"/>
+        </constraint>
+        <column xsi:type="varchar" name="store_name" length="255" nullable="false" comment="Store Name"/>
+        <column xsi:type="varchar" name="store_phone" length="255" nullable="true" comment="Store Phone Number"/>
+        <column xsi:type="varchar" name="store_address" length="255" nullable="true" comment="Store Address"/>
+        <column xsi:type="varchar" name="store_city" length="255" nullable="true" comment="Store City"/>
+        <column xsi:type="varchar" name="store_state" length="255" nullable="true" comment="Store State"/>
+        <column xsi:type="varchar" name="store_zip" length="255" nullable="true" comment="Store Zip"/>
+        <column xsi:type="varchar" name="store_country" length="255" nullable="true" comment="Store Country"/>
+        <index referenceId="STORE_LOCATOR_NAME" indexType="btree">
+            <column name="store_name"/>
+        </index>
+        <index referenceId="STORE_LOCATOR_ID" indexType="btree">
+            <column name="store_id"/>
+        </index>
+        <index referenceId="STORE_LOCATOR_FULLTEXT" indexType="fulltext">
+            <column name="store_name"/>
+            <column name="store_address"/>
+        </index>
+    </table>
+</schema>

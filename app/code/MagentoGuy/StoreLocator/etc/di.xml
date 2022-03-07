@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="MagentoGuy\StoreLocator\Api\StoreLocatorRepositoryInterface" type="MagentoGuy\StoreLocator\Model\StoreLocatorRepository"/>
+    <preference for="MagentoGuy\StoreLocator\Api\Data\StoreLocatorInterface" type="MagentoGuy\StoreLocator\Model\StoreLocator"/>
+    <preference for="MagentoGuy\StoreLocator\Api\StoreLocatorSearchResultInterface" type="Magento\Framework\Api\SearchResults"/>
+</config>
