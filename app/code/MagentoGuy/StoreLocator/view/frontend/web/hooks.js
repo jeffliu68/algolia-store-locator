@@ -5,7 +5,7 @@ algolia.registerHook('beforeAutocompleteSources', function(sources, algolia_clie
         name: 'store-locator',
         displayKey: 'value',
         source: function(query, callback) {
-            var index = algolia_client.initIndex('magento2_default_store_locator_tmp');
+            var index = algolia_client.initIndex('magento2_default_store_locator');
             index.search(query, { hitsPerPage: 10 }).then(function(answer) {
                 callback(answer.hits);
             }, function() {

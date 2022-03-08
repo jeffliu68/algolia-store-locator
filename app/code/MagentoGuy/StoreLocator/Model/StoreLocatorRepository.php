@@ -63,13 +63,13 @@ class StoreLocatorRepository implements StoreLocatorRepositoryInterface
     /**
      * Get Command
      *
-     * @param int $id
+     * @param int $storeId
      * @return StoreLocatorInterface
      * @throws NoSuchEntityException
      */
-    public function get(int $id): StoreLocatorInterface
+    public function get(int $storeId): StoreLocatorInterface
     {
-        return $this->get->execute($id);
+        return $this->get->execute($storeId);
     }
 
     /**
@@ -96,12 +96,12 @@ class StoreLocatorRepository implements StoreLocatorRepositoryInterface
     }
 
     /**
-     * @param int $id
+     * @param int $storeId
      * @return void
      * @throws \Magento\Framework\Exception\NoSuchEntityException
      */
-    public function deleteById(int $id): void
+    public function deleteById(int $storeId): void
     {
-        $this->deleteById->execute($id);
+        $this->deleteById->execute($storeId);
     }
 }

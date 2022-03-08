@@ -53,17 +53,13 @@ class Data extends \Algolia\AlgoliaSearch\Helper\Data
         $this->algoliaHelper = $algoliaHelper;
     }
 
-    public function rebuildStoreLocatorIndex($storeId)
+    public function rebuildStoreLocatorIndex($storeIds)
     {
-        if ($this->isIndexingEnabled($storeId) === false) {
-            return;
-        }
-
-        $collection = $this->getCollectionQuery($storeId);
+        $collection = $this->getCollectionQuery($storeIds);
 
         $collection->load();
 
-        $indexName = $this->getIndexName('_store_locator', $storeId, true);
+        $indexName = $this->getIndexName('_store_locator');
 
         $indexData = [];
 
@@ -93,10 +89,13 @@ class Data extends \Algolia\AlgoliaSearch\Helper\Data
         unset($collection);
     }
 
-    private function getCollectionQuery($storeId)
+    private function getCollectionQuery($storeIds = null)
     {
         /** @var \MagentoGuy\StoreLocator\Model\ResourceModel\StoreLocator\Collection $collection */
         $collection = $this->collectionFactory->create();
+        if ($storeIds) {
+            $collection->addFieldToFilter('store_id', ['in' => $storeIds]);
+        }
 
         return $collection;
     }

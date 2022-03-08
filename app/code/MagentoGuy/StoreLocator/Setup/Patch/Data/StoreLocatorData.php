@@ -67,8 +67,8 @@ class StoreLocatorData implements DataPatchInterface
             $storeLocator->setStorePhone((string)$row[1]);
             $storeLocator->setStoreAddress((string)$row[2]);
             $storeLocator->setStoreCity((string)$row[3]);
-            $storeLocator->setStoreZip((string)$row[4]);
-            $storeLocator->setStoreState((string)$row[5]);
+            $storeLocator->setStoreState((string)$row[4]);
+            $storeLocator->setStoreZip((string)$row[5]);
             $storeLocator->setStoreCountry((string)$row[6]);
             $this->storeLocatorRepository->save($storeLocator);
         }
