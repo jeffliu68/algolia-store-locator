@@ -59,7 +59,7 @@ class Data extends \Algolia\AlgoliaSearch\Helper\Data
 
         $collection->load();
 
-        $indexName = $this->getIndexName('_store_locator');
+        $indexName = $this->getIndexName('_store_locator', 1);
 
         $indexData = [];
 
