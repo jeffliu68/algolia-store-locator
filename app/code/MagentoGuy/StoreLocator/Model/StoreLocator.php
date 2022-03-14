@@ -48,7 +48,7 @@ class StoreLocator extends AbstractModel implements StoreLocatorInterface, Ident
     /**
      * @inheritDoc
      */
-    public function setStoreId(int $storeId)
+    public function setStoreId(int $storeId): StoreLocatorInterface
     {
         $this->setData(static::STORE_ID, $storeId);
 
@@ -66,7 +66,7 @@ class StoreLocator extends AbstractModel implements StoreLocatorInterface, Ident
     /**
      * @inheritDoc
      */
-    public function setStoreName(string $storeName)
+    public function setStoreName(string $storeName): StoreLocatorInterface
     {
         $this->setData(static::STORE_NAME, $storeName);
 
@@ -84,7 +84,7 @@ class StoreLocator extends AbstractModel implements StoreLocatorInterface, Ident
     /**
      * @inheritDoc
      */
-    public function setStorePhone(string $storePhone)
+    public function setStorePhone(string $storePhone): StoreLocatorInterface
     {
         $this->setData(static::STORE_PHONE, $storePhone);
 
@@ -102,7 +102,7 @@ class StoreLocator extends AbstractModel implements StoreLocatorInterface, Ident
     /**
      * @inheritDoc
      */
-    public function setStoreCity(string $storeCity)
+    public function setStoreCity(string $storeCity): StoreLocatorInterface
     {
         $this->setData(static::STORE_CITY, $storeCity);
 
@@ -120,7 +120,7 @@ class StoreLocator extends AbstractModel implements StoreLocatorInterface, Ident
     /**
      * @inheritDoc
      */
-    public function setStoreState(string $storeState)
+    public function setStoreState(string $storeState): StoreLocatorInterface
     {
         $this->setData(static::STORE_STATE, $storeState);
 
@@ -138,7 +138,7 @@ class StoreLocator extends AbstractModel implements StoreLocatorInterface, Ident
     /**
      * @inheritDoc
      */
-    public function setStoreCountry(string $storeCountry)
+    public function setStoreCountry(string $storeCountry): StoreLocatorInterface
     {
         $this->setData(static::STORE_COUNTRY, $storeCountry);
 
@@ -174,7 +174,7 @@ class StoreLocator extends AbstractModel implements StoreLocatorInterface, Ident
     /**
      * @inheritDoc
      */
-    public function setStoreAddress(string $storeAddress)
+    public function setStoreAddress(string $storeAddress): StoreLocatorInterface
     {
         $this->setData(static::STORE_ADDRESS, $storeAddress);
 

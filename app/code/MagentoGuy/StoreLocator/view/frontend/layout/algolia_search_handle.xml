@@ -2,7 +2,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/layout/etc/page_configuration.xsd">
     <head>
-        <script src="MagentoGuy_StoreLocator::hooks.js"/>
+        <script src="MagentoGuy_StoreLocator::js/hooks.js"/>
     </head>
     <body>
         <referenceBlock name="before.body.end">

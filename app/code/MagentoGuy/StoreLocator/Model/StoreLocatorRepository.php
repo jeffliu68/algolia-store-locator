@@ -13,6 +13,7 @@ use MagentoGuy\StoreLocator\Model\StoreLocator\Command\Get;
 use MagentoGuy\StoreLocator\Model\StoreLocator\Command\GetList;
 use MagentoGuy\StoreLocator\Model\StoreLocator\Command\Save;
 use MagentoGuy\StoreLocator\Model\StoreLocator\Command\DeleteById;
+use MagentoGuy\StoreLocator\Api\StoreLocatorSearchResultInterface;
 
 /**
  * Class StoreLocatorRepository
@@ -76,9 +77,9 @@ class StoreLocatorRepository implements StoreLocatorRepositoryInterface
      * GetList Command
      *
      * @param SearchCriteriaInterface|null $searchCriteria
-     * @return SearchResultsInterface
+     * @return StoreLocatorSearchResultInterface
      */
-    public function getList(SearchCriteriaInterface $searchCriteria = null)
+    public function getList(SearchCriteriaInterface $searchCriteria = null): StoreLocatorInterface
     {
         return $this->getList->execute($searchCriteria);
     }

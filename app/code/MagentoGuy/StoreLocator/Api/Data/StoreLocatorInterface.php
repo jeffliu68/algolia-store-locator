@@ -28,7 +28,7 @@ interface StoreLocatorInterface
      * @param int $storeId
      * @return \MagentoGuy\StoreLocator\Api\Data\StoreLocatorInterface
      */
-    public function setStoreId(int $storeId);
+    public function setStoreId(int $storeId): StoreLocatorInterface;
 
     /**
      * @return string
@@ -39,7 +39,7 @@ interface StoreLocatorInterface
      * @param string $storeName
      * @return \MagentoGuy\StoreLocator\Api\Data\StoreLocatorInterface
      */
-    public function setStoreName(string $storeName);
+    public function setStoreName(string $storeName): StoreLocatorInterface;
 
     /**
      * @return string
@@ -50,7 +50,7 @@ interface StoreLocatorInterface
      * @param string $storePhone
      * @return \MagentoGuy\StoreLocator\Api\Data\StoreLocatorInterface
      */
-    public function setStorePhone(string $storePhone);
+    public function setStorePhone(string $storePhone): StoreLocatorInterface;
 
     /**
      * @return string
@@ -61,7 +61,7 @@ interface StoreLocatorInterface
      * @param string $storeAddress
      * @return \MagentoGuy\StoreLocator\Api\Data\StoreLocatorInterface
      */
-    public function setStoreAddress(string $storeAddress);
+    public function setStoreAddress(string $storeAddress): StoreLocatorInterface;
 
     /**
      * @return string
@@ -72,7 +72,7 @@ interface StoreLocatorInterface
      * @param string $storeCity
      * @return \MagentoGuy\StoreLocator\Api\Data\StoreLocatorInterface
      */
-    public function setStoreCity(string $storeCity);
+    public function setStoreCity(string $storeCity): StoreLocatorInterface;
 
     /**
      * @return string
@@ -83,7 +83,7 @@ interface StoreLocatorInterface
      * @param string $storeState
      * @return \MagentoGuy\StoreLocator\Api\Data\StoreLocatorInterface
      */
-    public function setStoreState(string $storeState);
+    public function setStoreState(string $storeState): StoreLocatorInterface;
 
     /**
      * @return string
@@ -105,5 +105,5 @@ interface StoreLocatorInterface
      * @param string $storeCountry
      * @return \MagentoGuy\StoreLocator\Api\Data\StoreLocatorInterface
      */
-    public function setStoreCountry(string $storeCountry);
+    public function setStoreCountry(string $storeCountry): StoreLocatorInterface;
 }
